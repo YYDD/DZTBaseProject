@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'HLBaseProject'
+  spec.name         = 'DZTBaseProject'
   spec.version      = '1.0.0'
   spec.ios.deployment_target = '8.0'
   spec.license      = { :type => 'BSD' }
