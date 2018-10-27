@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'DZTBaseProject'
-  spec.version      = '1.0.0'
+  spec.version      = '1.0.1'
   spec.ios.deployment_target = '8.0'
   spec.license      = { :type => 'BSD' }
   spec.homepage     = 'https://github.com/YYDD/DZTBaseProject.git'
