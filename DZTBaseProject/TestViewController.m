@@ -21,8 +21,8 @@
     self.navThemeName = @"theme1";
     
     self.title = @"测试标题1";
-    [self addLeftTextItem:@"左1" target:nil action:nil];
-    [self addRightTextItem:@"右1" target:self action:@selector(rightBtnClick)];
+    [self addLeftTextItem:@"左1" action:nil];
+    [self addRightTextItem:@"右1" action:@selector(rightBtnClick)];
 
     
     

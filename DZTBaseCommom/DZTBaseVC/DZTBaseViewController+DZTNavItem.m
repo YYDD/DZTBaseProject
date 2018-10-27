@@ -30,33 +30,33 @@
     [self initNavTheme];
 }
 
-- (void)addLeftTextItem:(NSString *)itemString target:(id)target action:(SEL)selector {
+- (void)addLeftTextItem:(NSString *)itemString action:(SEL)selector {
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:itemString style:UIBarButtonItemStylePlain target:target action:selector];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:itemString style:UIBarButtonItemStylePlain target:self action:selector];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
     [self.navigationItem setLeftBarButtonItem:item];
     
 }
 
-- (void)addRightTextItem:(NSString *)itemString target:(id)target action:(SEL)selector {
+- (void)addRightTextItem:(NSString *)itemString action:(SEL)selector {
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:itemString style:UIBarButtonItemStylePlain target:target action:selector];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithTitle:itemString style:UIBarButtonItemStylePlain target:self action:selector];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
     [self.navigationItem setRightBarButtonItem:item];
 }
 
-- (void)addLeftImageItem:(UIImage *)itemImage target:(id)target action:(SEL)selector {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:target action:selector];
+- (void)addLeftImageItem:(UIImage *)itemImage action:(SEL)selector {
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:self action:selector];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
     [self.navigationItem setLeftBarButtonItem:item];
 }
 
-- (void)addRightImageItem:(UIImage *)itemImage target:(id)target action:(SEL)selector {
+- (void)addRightImageItem:(UIImage *)itemImage action:(SEL)selector {
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:target action:selector];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:self action:selector];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
     [self.navigationItem setRightBarButtonItem:item];

@@ -14,13 +14,13 @@
 
 - (void)resetNavTheme;
 
-- (void)addLeftTextItem:(NSString *)itemString target:(id)target action:(SEL)selector;
+- (void)addLeftTextItem:(NSString *)itemString action:(SEL)selector;
 
-- (void)addRightTextItem:(NSString *)itemString target:(id)target action:(SEL)selector;
+- (void)addRightTextItem:(NSString *)itemString action:(SEL)selector;
 
-- (void)addLeftImageItem:(UIImage *)itemImage target:(id)target action:(SEL)selector;
+- (void)addLeftImageItem:(UIImage *)itemImage action:(SEL)selector;
 
-- (void)addRightImageItem:(UIImage *)itemImage target:(id)target action:(SEL)selector;
+- (void)addRightImageItem:(UIImage *)itemImage action:(SEL)selector;
 
 - (void)addTitleTextItem:(NSString *)itemString;
 

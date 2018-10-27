@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"测试";
-    [self addLeftTextItem:@"去列表" target:self action:@selector(leftBtnClick)];
-    [self addRightTextItem:@"去普通" target:self action:@selector(rightBtnClick)];
+    [self addLeftTextItem:@"去列表" action:@selector(leftBtnClick)];
+    [self addRightTextItem:@"去普通" action:@selector(rightBtnClick)];
 }
 
 - (void)rightBtnClick {

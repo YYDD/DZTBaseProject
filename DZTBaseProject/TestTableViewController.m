@@ -21,7 +21,7 @@
 
     self.title = @"测试列表";
     
-    [self addLeftTextItem:@"下一级" target:self action:@selector(backClick)];
+    [self addLeftTextItem:@"下一级" action:@selector(backClick)];
     self.showMJHeader = YES;
     
     [self beginRefreshing];
