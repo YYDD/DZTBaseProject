@@ -85,7 +85,7 @@ static NSString *defaultRefreshThemeName = @"defaultRefresh";
         _systemRefreshConfigInfo = [DZTRefreshConfigInfo new];
         
         _systemRefreshConfigInfo.headerClassName = NSStringFromClass([MJRefreshStateHeader class]);
-        _systemRefreshConfigInfo.footerClassName = NSStringFromClass([MJRefreshAutoFooter class]) ;
+        _systemRefreshConfigInfo.footerClassName = NSStringFromClass([MJRefreshAutoNormalFooter class]) ;
     }
     return _systemRefreshConfigInfo;
 }
