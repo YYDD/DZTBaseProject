@@ -25,6 +25,8 @@
 
 -(void)swizzle_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     viewController.hidesBottomBarWhenPushed = YES; //viewController是将要被push的控制器
+    viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
+
     [self swizzle_pushViewController:viewController animated:animated];
 }
 

@@ -23,6 +23,7 @@
     }else {
         [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     }
+    self.navigationController.navigationBar.tintColor = info.foregroundItemColor;
     self.navigationController.navigationBar.titleTextAttributes = [self titleAttributes];
 }
 
@@ -50,8 +51,6 @@
 
 - (void)addLeftImageItem:(UIImage *)itemImage action:(SEL)selector {
     
-    itemImage = [itemImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:self action:selector];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
@@ -60,8 +59,6 @@
 
 - (void)addRightImageItem:(UIImage *)itemImage action:(SEL)selector {
     
-    itemImage = [itemImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:itemImage style:UIBarButtonItemStylePlain target:self action:selector];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
     [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
