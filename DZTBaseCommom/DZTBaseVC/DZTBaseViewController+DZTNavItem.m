@@ -31,6 +31,25 @@
     [self initNavTheme];
 }
 
+- (void)addLeftItems:(NSArray<UIBarButtonItem *> *)items {
+    
+    for (UIBarButtonItem *item in items) {
+        [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
+        [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
+    }
+    [self.navigationItem setLeftBarButtonItems:items];
+}
+
+- (void)addRightItems:(NSArray<UIBarButtonItem *> *)items {
+    
+    for (UIBarButtonItem *item in items) {
+        [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateNormal];
+        [item setTitleTextAttributes:[self itemAttributes] forState:UIControlStateHighlighted];
+    }
+    [self.navigationItem setRightBarButtonItems:items];
+}
+
+
 - (void)addLeftTextItem:(NSString *)itemString action:(SEL)selector {
     
     

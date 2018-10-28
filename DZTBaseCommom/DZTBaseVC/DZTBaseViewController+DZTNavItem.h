@@ -26,6 +26,10 @@
 
 - (void)addTitleImageItem:(UIImage *)itemImage;
 
+- (void)addLeftItems:(NSArray<UIBarButtonItem *> *)items;
+
+- (void)addRightItems:(NSArray<UIBarButtonItem *> *)items;
+
 
 @end
 
