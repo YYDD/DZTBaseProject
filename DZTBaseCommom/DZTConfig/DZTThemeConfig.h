@@ -49,6 +49,13 @@
 ///字体大小
 @property (nonatomic, copy) UIFont *titleFont;
 
+@property (nonatomic, assign) BOOL hideBottomLine;
+
+/**
+ UIStatusBarStyle
+ */
+@property (nonatomic, strong)NSNumber *statusBarStyleValue;
+
 @end
 
 @interface DZTRefreshConfigInfo : NSObject

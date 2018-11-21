@@ -25,6 +25,14 @@
     }
     self.navigationController.navigationBar.tintColor = info.foregroundItemColor;
     self.navigationController.navigationBar.titleTextAttributes = [self titleAttributes];
+    
+    if (info.statusBarStyleValue) {
+        [UIApplication sharedApplication].statusBarStyle = [info.statusBarStyleValue integerValue];
+    }
+
+    if (info.hideBottomLine) {
+        self.navigationController.navigationBar.clipsToBounds = YES;
+    }
 }
 
 - (void)resetNavTheme {
