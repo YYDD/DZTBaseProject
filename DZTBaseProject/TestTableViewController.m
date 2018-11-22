@@ -24,13 +24,14 @@
     [self addLeftTextItem:@"下一级" action:@selector(backClick)];
     self.showMJHeader = YES;
     
-    [self beginRefreshing];
+//    [self beginRefreshing];
     
 }
 
 - (void)backClick {
-    TestTableViewController *vc = [[TestTableViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    TestTableViewController *vc = [[TestTableViewController alloc]init];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

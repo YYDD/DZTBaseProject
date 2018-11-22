@@ -31,7 +31,7 @@
     }
 
     if (info.hideBottomLine) {
-        self.navigationController.navigationBar.clipsToBounds = YES;
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     }
 }
 

@@ -47,14 +47,20 @@
     whiteInfo.titleFont = [UIFont systemFontOfSize:17];
     whiteInfo.itemFont = [UIFont systemFontOfSize:13];
     [DZTThemeConfig addDefaultNavThemeWithConfig:whiteInfo];
+    whiteInfo.hideBottomLine = YES;
+    whiteInfo.statusBarStyleValue = @(UIStatusBarStyleDefault);
+    
+    DZTNavgationConfigInfo *whiteInfo1 = [[DZTNavgationConfigInfo alloc] init];
+    whiteInfo1.bgColor = [UIColor clearColor];
+    whiteInfo1.foregroundItemColor = [UIColor greenColor];
+    whiteInfo1.foregroundTitleColor = [UIColor whiteColor];
+    whiteInfo1.titleFont = [UIFont systemFontOfSize:13];
+    whiteInfo1.itemFont = [UIFont systemFontOfSize:15];
+    [DZTThemeConfig addNavThemeWithConfig:whiteInfo1 WithNavThemeName:@"theme1"];
+    whiteInfo.hideBottomLine = YES;
+    whiteInfo.statusBarStyleValue = @(UIStatusBarStyleLightContent);
 
-//    DZTNavgationConfigInfo *whiteInfo1 = [[DZTNavgationConfigInfo alloc] init];
-//    whiteInfo1.bgColor = [UIColor darkGrayColor];
-//    whiteInfo1.foregroundItemColor = [UIColor greenColor];
-//    whiteInfo1.foregroundTitleColor = [UIColor whiteColor];
-//    whiteInfo1.titleFont = [UIFont systemFontOfSize:13];
-//    whiteInfo1.itemFont = [UIFont systemFontOfSize:15];
-//    [DZTThemeConfig addNavThemeWithConfig:whiteInfo1 WithNavThemeName:@"theme1"];
+    [DZTBaseViewController addDefaultBackgroundColor:[UIColor darkGrayColor]];
     
 }
 
