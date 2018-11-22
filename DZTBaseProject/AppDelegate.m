@@ -60,7 +60,7 @@
     whiteInfo.hideBottomLine = YES;
     whiteInfo.statusBarStyleValue = @(UIStatusBarStyleLightContent);
 
-    [DZTBaseViewController addDefaultBackgroundColor:[UIColor darkGrayColor]];
+ //   [DZTBaseViewController addDefaultBackgroundColor:[UIColor darkGrayColor]];
     
 }
 

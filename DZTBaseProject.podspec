@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'DZTBaseProject'
-  spec.version      = '1.1.0'
+  spec.version      = '1.1.1'
   spec.ios.deployment_target = '8.0'
   spec.license      = { :type => 'BSD' }
   spec.homepage     = 'https://github.com/YYDD/DZTBaseProject.git'
@@ -14,6 +14,8 @@ Pod::Spec.new do |spec|
 
 
   spec.dependency 'MJRefresh'
+  spec.dependency 'YPNavigationBarTransition', '~> 2.0'
+
 
   spec.frameworks   = 'UIKit'
 

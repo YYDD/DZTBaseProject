@@ -10,6 +10,7 @@
 #import "TestViewController.h"
 #import "TestTableViewController.h"
 #import "TestPageViewController.h"
+#import <YPNavigationController.h>
 
 @interface TestBarViewController ()<UITabBarControllerDelegate>
 
@@ -33,7 +34,7 @@
     self.tabBar.translucent = NO;
     
     TestViewController *homeVC = [[TestViewController alloc]init];
-    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homeVC];
+    YPNavigationController *homeNav = [[YPNavigationController alloc]initWithRootViewController:homeVC];
     homeVC.hidesBottomBarWhenPushed = NO;
     
     UITabBarItem *homeItem = [[UITabBarItem alloc]init];
@@ -47,7 +48,7 @@
 
     
     TestTableViewController *workVC = [[TestTableViewController alloc]init];
-    UINavigationController *workNav = [[UINavigationController alloc] initWithRootViewController:workVC];
+    YPNavigationController *workNav = [[YPNavigationController alloc] initWithRootViewController:workVC];
     workVC.hidesBottomBarWhenPushed = NO;
     UITabBarItem *workItem = [[UITabBarItem alloc]init];
     workItem.image = [[UIImage imageNamed:@"tabSearch"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -60,7 +61,7 @@
     
     
     TestPageViewController *myVC = [[TestPageViewController alloc]init];
-    UINavigationController *myNav = [[UINavigationController alloc] initWithRootViewController:myVC];
+    YPNavigationController *myNav = [[YPNavigationController alloc] initWithRootViewController:myVC];
     myVC.hidesBottomBarWhenPushed = NO;
     
     UITabBarItem *myItem = [[UITabBarItem alloc]init];

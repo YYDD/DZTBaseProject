@@ -13,16 +13,31 @@
 
 @implementation DZTBaseViewController (DZTNavItem)
 
+
+- (YPNavigationBarConfigurations) yp_navigtionBarConfiguration {
+
+    [self removeConfigInfoCache];
+    DZTNavgationConfigInfo *info = [self configInfo];
+
+    if (info.bgColor == [UIColor clearColor]) {
+        return YPNavigationBarBackgroundStyleTransparent;
+    }
+    
+    return YPNavigationBarBackgroundStyleOpaque;
+}
+
+- (UIColor *) yp_navigationBarTintColor {
+
+    [self removeConfigInfoCache];
+    DZTNavgationConfigInfo *info = [self configInfo];
+    return info.bgColor;
+}
+
 - (void)initNavTheme {
 
     [self removeConfigInfoCache];
     DZTNavgationConfigInfo *info = [self configInfo];
     
-    if (info.bgColor) {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFilledWithColor:info.bgColor] forBarMetrics:UIBarMetricsDefault];
-    }else {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    }
     self.navigationController.navigationBar.tintColor = info.foregroundItemColor;
     self.navigationController.navigationBar.titleTextAttributes = [self titleAttributes];
     

@@ -7,8 +7,9 @@
 //
 
 #import "DZTBaseViewController.h"
+#import <YPNavigationBarTransition/YPNavigationBarTransition.h>
 
-@interface DZTBaseViewController (DZTNavItem)
+@interface DZTBaseViewController (DZTNavItem)<YPNavigationBarConfigureStyle>
 
 - (void)initNavTheme;
 
