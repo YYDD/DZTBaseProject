@@ -11,7 +11,7 @@
 #import "TestTableViewController.h"
 #import "TestPageViewController.h"
 
-@interface TestBarViewController ()<UITabBarControllerDelegate>
+@interface TestBarViewController ()
 
 @property (nonatomic,assign)NSInteger lastSelectedIndex;
 

@@ -8,6 +8,7 @@
 
 #import "DZTBaseViewController.h"
 #import "DZTBaseViewController+DZTNavItem.h"
+#import <UIViewController+YPNavigationBarTransition.h>
 
 ///默认背景颜色
 static UIColor *defaultBgColor = nil;
@@ -35,9 +36,9 @@ static UIColor *defaultBgColor = nil;
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
 
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self resetNavTheme];
 }
 
@@ -59,5 +60,7 @@ static UIColor *defaultBgColor = nil;
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
+
 
 @end

@@ -14,7 +14,7 @@
 @implementation DZTBaseViewController (DZTNavItem)
 
 - (void)initNavTheme {
-
+    
     [self removeConfigInfoCache];
     DZTNavgationConfigInfo *info = [self configInfo];
     
@@ -29,9 +29,9 @@
     if (info.statusBarStyleValue) {
         [UIApplication sharedApplication].statusBarStyle = [info.statusBarStyleValue integerValue];
     }
-
+    
     if (info.hideBottomLine) {
-        self.navigationController.navigationBar.clipsToBounds = YES;
+        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     }
 }
 
@@ -93,7 +93,7 @@
 }
 
 - (void)addTitleTextItem:(NSString *)itemString {
- 
+    
     self.navigationItem.title = itemString;
 }
 
@@ -117,7 +117,7 @@
     if (info.itemFont) {
         [mutDict setObject:info.itemFont forKey:NSFontAttributeName];
     }
-
+    
     return [mutDict copy];
 }
 
@@ -136,10 +136,10 @@
 }
 
 - (DZTNavgationConfigInfo *)configInfo {
-
+    
     DZTNavgationConfigInfo *info = objc_getAssociatedObject(self, @selector(configInfo));
     if (!info) {
-                
+        
         info = [DZTThemeConfig configInfoInNavTheme:self.navThemeName];
         objc_setAssociatedObject(self, @selector(configInfo), info, OBJC_ASSOCIATION_RETAIN);
     }
