@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		016CD5102A76FF94E12C96A2 /* libPods-DZTBaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E8D81777F5D595F7EBCE71 /* libPods-DZTBaseProject.a */; };
-		182DD90121A68CE8004E25EA /* YPNavigationController+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DD90021A68CE8004E25EA /* YPNavigationController+Config.m */; };
 		1835064E2173308400391DD4 /* TestFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835064D2173308400391DD4 /* TestFooter.m */; };
 		183506512173309300391DD4 /* TestHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 183506502173309300391DD4 /* TestHeader.m */; };
 		1845A28E216F2AD300F3F22D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1845A28D216F2AD300F3F22D /* AppDelegate.m */; };
@@ -52,8 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		182DD8FF21A68CE8004E25EA /* YPNavigationController+Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YPNavigationController+Config.h"; sourceTree = "<group>"; };
-		182DD90021A68CE8004E25EA /* YPNavigationController+Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YPNavigationController+Config.m"; sourceTree = "<group>"; };
 		1835064C2173308400391DD4 /* TestFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFooter.h; sourceTree = "<group>"; };
 		1835064D2173308400391DD4 /* TestFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFooter.m; sourceTree = "<group>"; };
 		1835064F2173309300391DD4 /* TestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHeader.h; sourceTree = "<group>"; };
@@ -182,8 +179,6 @@
 				18FCDC062174AFB5009FFFE9 /* TestBarViewController.m */,
 				18A6631A217747600095BB4E /* UINavigationController+DZTTabBar.h */,
 				18A6631B217747600095BB4E /* UINavigationController+DZTTabBar.m */,
-				182DD8FF21A68CE8004E25EA /* YPNavigationController+Config.h */,
-				182DD90021A68CE8004E25EA /* YPNavigationController+Config.m */,
 				1835064C2173308400391DD4 /* TestFooter.h */,
 				1835064D2173308400391DD4 /* TestFooter.m */,
 				1835064F2173309300391DD4 /* TestHeader.h */,
@@ -462,7 +457,6 @@
 				18FCDC072174AFB5009FFFE9 /* TestBarViewController.m in Sources */,
 				18FCDC002174AF99009FFFE9 /* DZTBaseViewController.m in Sources */,
 				18D5E47121709F30006D62DC /* TestTableViewController.m in Sources */,
-				182DD90121A68CE8004E25EA /* YPNavigationController+Config.m in Sources */,
 				18FCDBFD2174AF99009FFFE9 /* UIImage+Color.m in Sources */,
 				18FCDC0A2174B048009FFFE9 /* TestPageViewController.m in Sources */,
 				18A6631C217747600095BB4E /* UINavigationController+DZTTabBar.m in Sources */,

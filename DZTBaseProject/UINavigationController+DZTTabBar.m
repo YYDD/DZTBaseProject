@@ -8,6 +8,7 @@
 
 #import "UINavigationController+DZTTabBar.h"
 #import <objc/runtime.h>
+#import <CFYNavigationBarTransition.h>
 
 @implementation UINavigationController (DZTTabBar)
 
@@ -20,6 +21,22 @@
     
     method_exchangeImplementations(originPushMethod, swizzlePushMethod);
     
+    
+    SEL originalSEL = @selector(viewDidLoad);
+    SEL swizzleSEL = @selector(swizzle_viewDidLoad);
+    Method originalMethod = class_getInstanceMethod([UINavigationController class], originalSEL);
+    Method swizzleMethod = class_getInstanceMethod([UINavigationController class], swizzleSEL);
+    method_exchangeImplementations(originalMethod, swizzleMethod);
+    
+}
+
+
+- (void)swizzle_viewDidLoad {
+    
+    if ([self class] == [UINavigationController class]) {
+        [self openCFYNavigationBarFunction:YES];
+        [self swizzle_viewDidLoad];
+    }
 }
 
 

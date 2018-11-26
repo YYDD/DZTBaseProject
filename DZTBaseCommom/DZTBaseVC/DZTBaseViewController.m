@@ -8,7 +8,6 @@
 
 #import "DZTBaseViewController.h"
 #import "DZTBaseViewController+DZTNavItem.h"
-#import <UIViewController+YPNavigationBarTransition.h>
 
 ///默认背景颜色
 static UIColor *defaultBgColor = nil;

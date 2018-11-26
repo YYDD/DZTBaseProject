@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "DZTBaseViewController+DZTNavItem.h"
+#import "TestTableViewController.h"
 
 @interface TestViewController ()
 
@@ -31,7 +32,10 @@
 
 - (void)rightBtnClick {
     
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
+    TestTableViewController *vc = [[TestTableViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 

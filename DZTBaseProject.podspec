@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
 
   spec.dependency 'MJRefresh'
-  spec.dependency 'YPNavigationBarTransition', '~> 2.0'
+  spec.dependency 'CFYNavigationBarTransition'
 
 
   spec.frameworks   = 'UIKit'

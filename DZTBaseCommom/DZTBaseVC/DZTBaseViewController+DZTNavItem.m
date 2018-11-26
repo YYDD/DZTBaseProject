@@ -10,6 +10,7 @@
 #import "UIImage+Color.h"
 #import "DZTThemeConfig.h"
 #import <objc/runtime.h>
+#import <CFYNavigationBarTransition.h>
 
 @implementation DZTBaseViewController (DZTNavItem)
 
@@ -19,10 +20,11 @@
     DZTNavgationConfigInfo *info = [self configInfo];
     
     if (info.bgColor) {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageFilledWithColor:info.bgColor] forBarMetrics:UIBarMetricsDefault];
+        [self cfy_setNavigationBarBackgroundColor:info.bgColor];
     }else {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        [self cfy_setNavigationBarBackgroundColor:[UIColor clearColor]];
     }
+    
     self.navigationController.navigationBar.tintColor = info.foregroundItemColor;
     self.navigationController.navigationBar.titleTextAttributes = [self titleAttributes];
     
@@ -38,6 +40,7 @@
 - (void)resetNavTheme {
     [self initNavTheme];
 }
+
 
 - (void)addLeftItems:(NSArray<UIBarButtonItem *> *)items {
     

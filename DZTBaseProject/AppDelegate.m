@@ -41,21 +41,22 @@
 + (void)initNavConfigInfo {
     
     DZTNavgationConfigInfo *whiteInfo = [[DZTNavgationConfigInfo alloc] init];
-    whiteInfo.bgColor = [UIColor lightGrayColor];
-    whiteInfo.foregroundItemColor = [UIColor redColor];
-    whiteInfo.foregroundTitleColor = [UIColor greenColor];
+    whiteInfo.bgColor = [UIColor redColor];
+    whiteInfo.foregroundItemColor = [UIColor whiteColor];
+    whiteInfo.foregroundTitleColor = [UIColor whiteColor];
     whiteInfo.titleFont = [UIFont systemFontOfSize:17];
     whiteInfo.itemFont = [UIFont systemFontOfSize:13];
     [DZTThemeConfig addDefaultNavThemeWithConfig:whiteInfo];
 
     DZTNavgationConfigInfo *whiteInfo1 = [[DZTNavgationConfigInfo alloc] init];
-    whiteInfo1.bgColor = [UIColor darkGrayColor];
+    whiteInfo1.bgColor = [UIColor whiteColor];
     whiteInfo1.foregroundItemColor = [UIColor greenColor];
     whiteInfo1.foregroundTitleColor = [UIColor whiteColor];
     whiteInfo1.titleFont = [UIFont systemFontOfSize:13];
     whiteInfo1.itemFont = [UIFont systemFontOfSize:15];
     [DZTThemeConfig addNavThemeWithConfig:whiteInfo1 WithNavThemeName:@"theme1"];
 
+    
     [DZTBaseViewController addDefaultBackgroundColor:[UIColor darkGrayColor]];
     
 }

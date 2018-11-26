@@ -29,8 +29,7 @@
 }
 
 - (void)backClick {
-    TestTableViewController *vc = [[TestTableViewController alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
