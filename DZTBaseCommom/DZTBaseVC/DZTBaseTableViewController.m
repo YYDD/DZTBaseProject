@@ -36,7 +36,7 @@
 
 - (void)initTable {
     
-    UITableView *tableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:self.tableStyle];
+    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(self.navigationController.navigationBar.frame), [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.navigationController.navigationBar.frame)) style:self.tableStyle];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.backgroundColor = [UIColor clearColor];

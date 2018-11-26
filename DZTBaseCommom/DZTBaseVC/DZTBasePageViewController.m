@@ -25,7 +25,7 @@
     
 
     
-    self.pageViewController.view.frame = [UIScreen mainScreen].bounds;
+    self.pageViewController.view.frame = CGRectMake(0,CGRectGetMaxY(self.navigationController.navigationBar.frame), [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.navigationController.navigationBar.frame));
     [self.view addSubview:self.pageViewController.view];
     [self addChildViewController:self.pageViewController];
     self.pageViewController.dataSource = self;

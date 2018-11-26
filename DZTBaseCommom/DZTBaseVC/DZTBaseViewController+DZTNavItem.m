@@ -25,6 +25,13 @@
         [self cfy_setNavigationBarBackgroundColor:[UIColor clearColor]];
     }
     
+    if (info.bottomLineColor) {
+        [self cfy_setNavigationBarShadowImageBackgroundColor:info.bottomLineColor];
+    }else {
+        [self cfy_setNavigationBarShadowImageBackgroundColor:[UIColor clearColor]];
+    }
+
+    
     self.navigationController.navigationBar.tintColor = info.foregroundItemColor;
     self.navigationController.navigationBar.titleTextAttributes = [self titleAttributes];
     
@@ -32,9 +39,6 @@
         [UIApplication sharedApplication].statusBarStyle = [info.statusBarStyleValue integerValue];
     }
     
-    if (info.hideBottomLine) {
-        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    }
 }
 
 - (void)resetNavTheme {

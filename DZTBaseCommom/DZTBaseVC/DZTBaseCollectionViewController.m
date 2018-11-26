@@ -47,7 +47,7 @@
         layout.minimumInteritemSpacing= 10;
     }
  
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:layout];
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(self.navigationController.navigationBar.frame), [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - CGRectGetMaxY(self.navigationController.navigationBar.frame)) collectionViewLayout:layout];
     
     collectionView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_collectionView = collectionView];
