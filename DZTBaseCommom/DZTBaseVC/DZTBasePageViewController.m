@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UIPageViewController *pageViewController;
 
+@property (nonatomic, assign) BOOL scrollUnFinished;
+
 @end
 
 @implementation DZTBasePageViewController
@@ -136,8 +138,20 @@
     NSInteger lastPage = [self currentPage];
     UIPageViewControllerNavigationDirection direction = lastPage > currentPage ? UIPageViewControllerNavigationDirectionReverse : UIPageViewControllerNavigationDirectionForward;
     
+    if (self.scrollUnFinished) {
+        return;
+    }
+
+    __weak typeof(self) weakSelf = self;
     UIViewController *vc = [self viewControllerForIndex:currentPage];
-    [self.pageViewController setViewControllers:@[vc?:[UIViewController new]] direction:direction animated:animated completion:completion];
+    [self.pageViewController setViewControllers:@[vc?:[UIViewController new]] direction:direction animated:animated completion:^(BOOL finished) {
+        
+        weakSelf.scrollUnFinished = !finished;
+        if (completion) {
+            completion(finished);
+        }
+        
+    }];
 }
 
 
